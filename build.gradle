@@ -1,0 +1,21 @@
+group 'spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
+    compile 'org.springframework:spring-webmvc:3.2.18.RELEASE'
+    compile 'org.springframework:spring-jdbc:3.2.18.RELEASE'
+    compile("mysql:mysql-connector-java:5.1.31")
+    compileOnly "org.projectlombok:lombok:1.16.16"
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
